@@ -1,0 +1,527 @@
+body{
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(13, 100px);
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+header {
+    position: relative;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #272424;
+    color: white;
+    z-index: 1;
+}
+
+header h4 {
+    position: absolute;
+    left: 10%;
+    font-size: 1.6rem;
+}
+
+/* grid */
+
+header {
+    grid-row: 1/ 1;
+    grid-column: 1/ -1;
+}
+
+.aboutTitle {
+    grid-row: 2/2;
+    grid-column: 1/4;
+}
+
+.AboutMe {
+    grid-row: 3/ 5;
+    grid-column: 1/ 5;
+}
+
+.Profile {
+    grid-row: 2/ 2;
+    grid-column: 6/ 7;
+}
+
+#rQoute {
+    grid-row: 6/8;
+    grid-column: 1/3;
+}
+
+#cite {
+    grid-row: 9/10;
+    grid-column: 1/3;
+}
+
+#box1 {
+    position: absolute;
+    top: 510px;
+    left: 410px;
+    z-index: 3;
+}
+
+.project1 {
+    position: absolute;
+    left: 810px;
+    top: 510px;
+}
+
+.project2 {
+    position: absolute;
+    left:410px;
+    top: 510px;
+}
+
+.project3 {
+    position: absolute;
+    left: 410px;
+    top: 710px;
+}
+
+.mytabs {
+    grid-row: 10/11;
+    grid-column: 1/4;
+}
+
+.contact {
+    grid-row: 10/11;
+    grid-column: 5/7;
+}
+
+/* Splash screen */
+
+.intro { 
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.logo{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+/* About Me Page */
+
+.aboutTitle{
+    display: inline-block;
+    width: 630px;
+    height: 100px;
+    padding: 20px;
+    font-size: 50px;
+    background-color: #272424;
+    color: white;
+    margin-top: 0;
+    margin-left: 15px;
+}
+
+.meParagraph {
+    color: #fafafa;
+    background-color: #272424;
+    font-size: 25px;
+    width: 630px;
+    height: 302px;
+    margin: 0px;
+    margin-left: 15px;
+    padding: 20px;
+}
+
+.Profile {
+    margin: 0px;
+    border: solid 10px #272424;
+    height: 400px;
+    width: 350px;
+    z-index: 1;
+}
+
+/* projects */
+
+.blox {
+    width: 1050px;
+    height: 400px;
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    cursor: pointer;
+    background-color: #afafaf;
+}
+
+.p1Header {
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    width: 400px;
+    height: 50px;
+    position: absolute;
+}
+
+.p2Header {
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+}
+
+.p3Header {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    padding: 20px;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+}
+
+#box1:hover {
+    background-color: transparent;
+    color: transparent;
+    animation: slideInRight 2s ease-in 0s 1 normal none;
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translate(1000px);
+    }
+    from{
+
+        transform: translate(0px);
+    }
+}
+
+/* contact page */
+
+.container h2{
+    padding: 30px;
+    width: 300px;
+    height: 100px;
+    margin: 0px;
+    font-size: 40px;
+    background-color: #272424;
+    color: white;
+}
+
+.contact-wrapper{
+    text-align: center;
+    background-color: #272424;
+    color: white;
+    width: 300px;
+    height: 264px;
+}
+
+.form-group{
+    padding: 20px;
+    width: 300px;
+    height: 75px;
+}
+
+/* qoute */
+
+#rQoute {
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+    text-align: center;
+    background-color: #272424;
+    width: 400px;
+    height: 300px;
+    margin: 0;
+    margin-left: 15px;
+}
+
+#cite {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    margin: 0px;
+    background-color: #272424;
+    height: 100px;
+    width: 387px;
+    z-index: 2;
+    margin-left: 15px;
+}
+
+/* slider */
+
+@keyframes slideInRight {
+    to {
+        transform: translate(600px);
+    }
+    from{
+
+        transform: translate(0px);
+    }
+}
+
+/* tabs */
+
+.mytabs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 825px;
+    margin-left: 15px;
+}
+
+.mytabs input[type="radio"]{
+    display: none;
+}
+
+.mytabs label {
+    width: 275px;
+    height: 100px;
+    font-size: 50px;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    margin-top: 0px;
+    background: #272424;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.mytabs .tab {
+    width: 840px;
+    height: 264px;
+    padding: 20px;
+    background-color: #afafaf;
+    order: 1;
+    display: none;
+    z-index: 2;
+}
+
+.mytabs .tab h2 {
+    font-size: 3em;
+}
+
+.mytabs input[type="radio"]:checked + label + .tab {
+    display: block;
+    background-color: #afafaf;
+}
+
+.mytabs input[type="radio"]:checked + label {
+    background-color: #afafaf;
+    color: black;
+}
+
+/* tab content */
+
+.skill4{
+    margin-left: 20px;
+}
+
+.skill3{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.experianceImg {
+    margin: 20px;
+}
+
+/* animation */
+
+@keyframes moveRotateScale {
+    from {
+        transform: translate(100px);
+    }
+    to {
+        transform: translate(5px) scale(2) rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    80%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(350px)
+    }
+    20% {
+        transform: translateY(300px)
+    }
+    60% {
+        transform: translateY(200px);
+    }
+}
+
+.bigBox {
+    grid-row: 2/5;
+    grid-column: 4/6;
+    width: 600px;
+    height: 402px;
+    margin: 0px;
+    border: solid 5px #272424;
+}
+
+.box{
+    transition-property: transform;
+    transition-duration: 200ms;
+    
+}
+
+#box-1 {
+    grid-row: 2/5;
+    grid-column: 4/5;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(209, 22, 22);
+    animation: bounce 2s infinite alternate-reverse both;
+    animation-timing-function: linear;
+    border-radius: 0%;
+    position: absolute;
+}
+#box-2 {
+    width: 20px;
+    height: 20px;
+    animation-timing-function: ease;
+    grid-row: 2/5;
+    grid-column: 4/5;
+    animation: moveRotateScale 2s infinite alternate-reverse forwards running;
+    margin: 20px;
+    transform-origin: bottom left;
+    z-index: 1;
+    background-color: rgb(17, 17, 129);
+    position: absolute;
+    left: 800px;
+    top: 200px;
+    
+}
+#box-3 {
+    width: 30px;
+    height: 30px;
+    grid-row: 2/5;
+    grid-column: 4/5;
+    background-color: rgb(209, 22, 22);
+    animation: bounce 4s infinite alternate-reverse both;
+    animation-timing-function: ease-out;
+    border-radius: 0%;
+    z-index: 2;
+    position: absolute;
+    left: 790px;
+}
+#box-4 {
+    width: 30px;
+    height: 30px;
+    grid-row: 2/5;
+    grid-column: 4/5;
+    animation-timing-function: ease-out;
+    animation: moveRotateScale 3s infinite alternate forwards running;
+    margin: 20px;
+    z-index: 1;
+    background-color: rgb(17, 17, 129);
+    transform-origin: bottom right;
+    position: absolute;
+    top: 150px;
+    left: 900px;
+}
+#box-5 {
+    width: 25px;
+    height: 25px;
+    grid-row: 2/5;
+    grid-column: 4/5;
+    background-color: rgb(223, 215, 0);
+    animation: bounce 4s infinite alternate-reverse both;
+    width: 40px;
+    height: 40px;
+    animation-timing-function: linear;
+    border-radius: 0%;
+    transform: translateY(60px);
+    position: absolute;
+    left: 1000px;
+}
+#box-6 {
+    width: 40px;
+    height: 40px;
+    animation-timing-function: ease-in-out;
+    animation: moveRotateScale 2s infinite alternate-reverse forwards running;
+    grid-row: 2/5;
+    grid-column: 6/7;
+    margin: 20px;
+    background-color: rgb(223, 215, 0);
+    z-index: 1;
+    transform-origin: center;
+    position: absolute;
+    top: 300px;
+    left: 650px;
+}
+#box-7 {
+    width: 25px;
+    height: 25px;
+    grid-row: 2/5;
+    grid-column: 4/5;
+    background-color: rgb(17, 17, 129);
+    animation: bounce 2s infinite alternate-reverse both;
+    animation-timing-function: ease;
+    border-radius: 0%;
+    z-index: 2;
+    position: absolute;
+    left: 930px;
+}
+#box-8 {
+    width: 25px;
+    height: 25px;
+    grid-row: 1/5;
+    grid-column: 5/6;
+    background-color: rgb(223, 215, 0);
+    animation: bounce 3s infinite alternate-reverse both;
+    animation-timing-function: ease-in-out;
+    border-radius: 0%;
+    position: absolute;
+    left: 950px;
+}
+
+/* link/sources */
+
+.sources {
+    width: 311px;
+    height: 363px;
+    margin: 0px;
+    position: absolute;
+    top: 910px;
+    left: 1148px;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    background-color: #272424;
+    z-index: 2;
+}
